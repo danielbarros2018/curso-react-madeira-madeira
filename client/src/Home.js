@@ -8,7 +8,7 @@ export default class Produto extends React.Component {
     render () {
         return (
             <div>
-                Home!
+                Home! 123
             </div>
         )
     }

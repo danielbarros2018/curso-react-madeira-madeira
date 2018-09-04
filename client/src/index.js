@@ -1,15 +1,17 @@
 import React from 'react'
 import ReactDOM from 'react-dom'
-import {Router, Route} from 'react-router'
+import {BrowserRouter as Router, Route} from 'react-router-dom'
 
 import Home from "./Home"
 import Produto from "./Produto"
 
-const ROUTES = () => (
-    <Route>
-        <Route path="/" component={Home} />
-        <Route path="/produto" component={Produto} />
-    </Route>
+const Routes = () => (
+    <Router>
+        <div>
+            <Route path="/" exact component={Home} />
+            <Route path="/produto" component={Produto} title="Cama casal..."/>
+        </div>
+    </Router>
 )
 
-ReactDOM.render(<App />, document.getElementById('root'));
+ReactDOM.render(<Routes />, document.getElementById('root'));
